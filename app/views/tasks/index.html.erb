@@ -1,0 +1,17 @@
+<div classs="container">
+<h1>  Task Manager </h1>
+<ul class="list">
+  <% @tasks.each do |task| %>
+  <div>
+  <li>
+    <input type="checkbox" id="scales" name="scales" checked>
+    <%= link_to task.title, task_path(task.id) %>
+
+  </li>
+
+    <% end %>
+  </li>
+  </div>
+</ul>
+<%= link_to" Add a new task ", new_task_path(:new) %>
+</div>
